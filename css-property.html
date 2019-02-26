@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--선택자{프로퍼티:값;} h1의 color 는 전부 red -->
+<html>
+  <head>
+    <title>CSS Property Test</title>
+    <meta charset="utf-8">
+    <style>
+      p:nth-child(1) { }
+      p:nth-child(2) { font-size:18px; }
+      p:nth-child(3) { font-size:150%; }
+      p:nth-child(4) { font-size:2.0em; }
+
+      h1 { background-color:red;}
+      h2 { background-color:rgb(255,255,0);}
+      h3 { background-color:rgba(255,0,0,0.5);}
+      h4 { background-color:#0094FF;}
+      /* body { background-image:url("html5.jpg");} */
+      div { width:100px; height:100px; background-color:red;
+            border: 20px solid black; margin:0 30px 0 30px;padding:0 30px 0 30px;}
+    </style>
+
+  </head>
+  <body>
+    <p>CSS Property test1</p>
+    <p>CSS Property test2</p>
+    <p>CSS Property test3</p>
+    <p>CSS Property test4</p>
+
+    <h1>h1 Title</h1>
+    <h2>h2 Title</h2>
+    <h3>h3 Title</h3>
+    <h4>h4 Title</h4>
+
+    <div></div>
+
+  </body>
+</html>
