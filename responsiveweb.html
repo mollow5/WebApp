@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Responsive Web</title>
+    <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1.0"/>
+    <style>
+
+      h1 { text-align:center; }
+      body { border: 10px solid green; font-size:24px; padding :20px; }
+
+      @media screen and (max-width:767px) {
+        body { background-color:gray; }
+      }
+      @media screen and (min-width:768px) and (max-width:959px) {
+        body { background-color:green; }
+      }
+      @media screen and (min-width:960px){
+        body { background-color:blue; }
+      }
+
+      @media screen and (orientation: portrait){
+        body { background-color:red; }
+      }
+
+      @media screen and (orientation: landscape){
+        body { background-color:blue; }
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>HTML / CSS / JavaScript</h1>
+    <div>
+      <p>Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML.
+      <p>[1] CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
+      <p>[2] CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.
+      <p>[3] This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate .
+      <p>css file, and reduce complexity and repetition in the structural content.
+      <p>Separation of formatting and content also makes it feasible to present the same markup page in different styles for different rendering methods, such as on-screen, in print, by voice (via speech-based browser or screen reader), and on Braille-based tactile devices.
+      <p>CSS also has rules for alternate formatting if the content is accessed on a mobile device.
+      <p>[4]The name cascading comes from the specified priority scheme to determine which style rule applies if more than one rule matches a particular element.
+      <p>This cascading priority scheme is predictable.
+      <p>The CSS specifications are maintained by the World Wide Web Consortium (W3C).
+      <p>Internet media type (MIME type) text/css is registered for use with CSS by RFC 2318 (March 1998). The W3C operates a free CSS validation service for CSS documents.
+      <p>[5]In addition to HTML, other markup languages support the use of CSS including XHTML, plain XML, SVG, and XUL.
+    </div>
+  </body>
+</html>
