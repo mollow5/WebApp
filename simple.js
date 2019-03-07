@@ -34,17 +34,43 @@ parent.insertBefore(p1,firstChild);
 parent.appendChild(p2);
 console.log(document.getElementById('content'));
 
-function highligthParas ( containing ){
+function highlightParas ( containing ){
   if(typeof containing == 'string'){
     containing = new RegExp(`\\b${containing}\\b`,'i'); // RegExp 정규표현식을 사용하기 위한 객체
   }
   const paras = document.getElementsByTagName('p');
   console.log(paras);
   for(let p of paras){
-    if ( !containing.test(p.textContent)){
+    if ( !containing.test(p.textContent)){ // unique 라는 내용이 포함된 텍스트
       continue;
     }
     p.classList.add('highlight');
   }
 }
-highligthparas('unique');
+//highlightParas('unique');
+
+function removeParaHighlights(){
+  const paras = document.querySelectorAll('p.highlight');
+  for( let p of paras){
+    p.classList.remove('highlight');
+  }
+}
+const highlightActions = document.querySelectorAll('[data-action = "highlight"]');
+console.log(highlightActions);
+console.log(highlightActions[0].dataset);
+highlightActions[0].dataset.containing = "giraffe";
+highlightActions[0].dataset.caseSensitive = "true";
+for (let a of highlightActions){
+    a.addEventListener('click',evt =>{
+        evt.preventDefault();
+        highlightParas('unique');
+    })
+}
+
+const removeHightlightActions = document.querySelectorAll('[data-action="removeHighlight"]');
+for ( let a of removeHightlightActions){
+  a.addEventListner('click',evt=>{
+    evt.preventDefault();
+    removeParaHighlights();
+  });
+}
