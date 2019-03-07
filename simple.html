@@ -26,8 +26,21 @@
       <p>Classes (such as <span class="code">.callout</span>)
         can be used on many elements.</p>
       <div id ="callout2" class="callout fancy">
-        <p>A single HTML element can have multiple classes.</p>
+        <p>A single HTML element can have multiple classes.unique</p>
       </div>
+    </div>
+    <div>
+      <button data-action = "highlight" data-containing = "unique"
+                    onclick="highlightParas('unique')">
+                HighLight paragraphs containingt "unique"
+            </button>
+            <button data-action = "removeHighlights"
+                    onclick="removeParaHighlights()">
+                Remove highlights
+            </button>
+            <button data-action = "Highlight">
+                append button
+            </button>
     </div>
     <script src="simple.js"></script>
   </body>
